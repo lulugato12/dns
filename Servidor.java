@@ -9,9 +9,10 @@
  * 15-abril-19
  *
  * Falta:
- *
+ * 
  */
 public class Servidor{
-  String nombre;
+  /* variables */
 
+  /* metodos */
 }

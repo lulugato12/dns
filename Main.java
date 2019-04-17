@@ -11,13 +11,32 @@
  * 15-abril-19
  *
  * Falta:
+ * -> cargar informacion de un txt
  */
+import java.util.Scanner;
 
 public class Main{
   public static void main(String[] args) {
-    /* Cargar informacion */
+    /* variables */
+    Scanner scan = new Scanner(System.in);
+    int opcion = 9999;
+    /* cargar informacion */
 
 
-    /* Desplegar menu */
+    /* desplegar menu */
+    do{
+      System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");
+      opcion = scan.nextInt();
+      switch(opcion){
+        case 0:
+          break;
+        case 1:
+          break;
+        case 2:
+          break;
+        default:
+          System.out.println("Opcion no valida.");
+      }
+    }while(opcion != 0);
   }
 }

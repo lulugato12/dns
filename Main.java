@@ -8,7 +8,7 @@
  * Se pueden agregar mas sitios web.
  *
  * Ultima fecha de modificacion:
- * 15-abril-19
+ * 17-abril-19
  *
  * Falta:
  * -> cargar informacion de un txt
@@ -20,6 +20,7 @@ public class Main{
     /* variables */
     Scanner scan = new Scanner(System.in);
     int opcion = 9999;
+
     /* cargar informacion */
 
 
@@ -38,5 +39,7 @@ public class Main{
           System.out.println("Opcion no valida.");
       }
     }while(opcion != 0);
+
+    /* guardar informacion */
   }
 }

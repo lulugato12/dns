@@ -16,13 +16,23 @@
 import java.util.Scanner;
 
 public class Main{
+  /* cargar informacion */
+  public static void cargarInfo(){
+
+  }
+
+  /* guardar informacion */
+  public static void gurdarInfo(){
+
+  }
+
   public static void main(String[] args) {
     /* variables */
     Scanner scan = new Scanner(System.in);
     int opcion = 9999;
 
     /* cargar informacion */
-
+    cargarInfo();
 
     /* desplegar menu */
     do{
@@ -41,5 +51,6 @@ public class Main{
     }while(opcion != 0);
 
     /* guardar informacion */
+    gurdarInfo();
   }
 }

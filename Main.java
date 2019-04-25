@@ -23,7 +23,6 @@ public class Main{
 
     /* cargar informacion */
 
-
     /* desplegar menu */
     do{
       System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");

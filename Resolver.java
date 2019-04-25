@@ -14,7 +14,12 @@
 
 public class Resolver{
   /* variables */
-
+  ArrayList<String> sitio;
+  ArrayList<String> ip;
   /* metodos */
-
+  /* constructor */
+  public Resolver(){
+    sitio = new ArrayList<String>();
+    ip = new ArrayList<String>();
+  }
 }

@@ -27,7 +27,7 @@ public class Resolver{
   }
 
   /* inicia la busqueda del ip */
-  public String encontrarIp(String pagina){
+  public String encontrarIp(String pagina, Root r){
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
       if(sitio.get(i) == pagina){
@@ -38,5 +38,11 @@ public class Resolver{
     /* llama al root */
 
     return "Algo salio mal";
+  }
+
+  /* agregar ip a la memoria del resolver */
+  public void agregarIp(String ipAdress, String pagina){
+    sitio.add(pagina);
+    ip.add(ipAdress);
   }
 }

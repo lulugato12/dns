@@ -4,12 +4,6 @@
  *
  * Descripcion:
  * Objeto Resolver.
- *
- * Ultima fecha de modificacion:
- * 18-abril-19
- *
- * Falta:
- *
  */
 
 import java.util.ArrayList;

@@ -4,17 +4,11 @@
  *
  * Descripcion:
  * Objeto Root.
- *
- * Ultima fecha de modificacion:
- * 18-abril-19
- *
- * Falta:
- *
  */
 
 public class Root{
   /* variables */
 
   /* metodos */
-  
+
 }

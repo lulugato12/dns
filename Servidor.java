@@ -4,12 +4,6 @@
  *
  * Descripcion:
  * Objeto Servidor.
- *
- * Ultima fecha de modificacion:
- * 18-abril-19
- *
- * Falta:
- *
  */
 public class Servidor{
   /* variables */

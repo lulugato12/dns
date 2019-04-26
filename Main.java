@@ -12,17 +12,41 @@
  *
  * Falta:
  * -> cargar informacion de un txt
+ * -> guardar la informacion de un txt
  */
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
 public class Main{
   public static void main(String[] args) {
-    /* variables */
+    /* variables menu */
     Scanner scan = new Scanner(System.in);
     int opcion = 9999;
+    /* variables lectura de archivos */
+    String file = "data.txt";
+    String linea = "";
+    int n = 0;
+    /* variables servidores */
 
     /* cargar informacion */
+    try{
+      FileReader fl = new FileReader(file);
+      BufferedReader br = new BufferedReader(fl);
 
+      /* cargar informacion al resolver */
+      n = Integer.parseInt(BufferedReader.readLine());
+
+      /* cargar informacion al root */
+      n = Integer.parseInt(BufferedReader.readLine());
+      
+      /* cargar informacion a los tld */
+
+    }
+    catch(IOException e){
+      System.out.println("Ocurrio un error al leer el archivo");
+    }
     /* desplegar menu */
     do{
       System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");

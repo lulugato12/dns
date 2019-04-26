@@ -32,8 +32,15 @@ public class Main{
     int opcion = 9999;
 
     /* cargar informacion */
+<<<<<<< HEAD
     cargarInfo();
 
+||||||| merged common ancestors
+
+
+=======
+
+>>>>>>> f56f5ba10018a79674d00a1a57ba2426e1d79d0b
     /* desplegar menu */
     do{
       System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");

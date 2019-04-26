@@ -8,7 +8,6 @@
 public class Servidor{
   /* variables */
   String dominio;
-  String tld;
   String ip;
 
   /* metodos */
@@ -23,10 +22,6 @@ public class Servidor{
   /* gets */
   public String getDominio(){
     return dominio;
-  }
-
-  public String getTld(){
-    return tld;
   }
 
   public String getIp(){

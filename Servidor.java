@@ -8,25 +8,19 @@
 public class Servidor{
   /* variables */
   String dominio;
-  String tld;
   String ip;
 
   /* metodos */
 
   /* constructor */
-  public Servidor(String dominio, String tld, String ip){
+  public Servidor(String dominio, String ip){
     this.dominio = dominio;
-    this.tld = tld;
     this.ip = ip;
   }
 
   /* gets */
   public String getDominio(){
     return dominio;
-  }
-
-  public String getTld(){
-    return tld;
   }
 
   public String getIp(){

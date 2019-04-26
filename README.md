@@ -6,7 +6,7 @@ Colaboradores:
 @jaorsa
 
 **Falta por resolver:**
-- [ ] servidores tld
+- [ ] Tld: que pasa si no existe un dominio?
 - [ ] root
 - [ ] resolver
 - [ ] lectura de datos

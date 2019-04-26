@@ -10,14 +10,23 @@
 import java.util.Scanner;
 
 public class Main{
+  /* cargar informacion */
+  public static void cargarInfo(){
+
+  }
+
+  /* guardar informacion */
+  public static void gurdarInfo(){
+
+  }
+
   public static void main(String[] args) {
     /* variables */
     Scanner scan = new Scanner(System.in);
     int opcion = 9999;
 
     /* cargar informacion */
-
-
+    cargarInfo();
     /* desplegar menu */
     do{
       System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");

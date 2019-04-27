@@ -4,14 +4,26 @@
  *
  * Descripcion:
  * Objeto Servidor.
- *
- * Ultima fecha de modificacion:
- * 15-abril-19
- *
- * Falta:
- *
  */
 public class Servidor{
-  String nombre;
+  /* variables */
+  String dominio;
+  String ip;
 
+  /* metodos */
+
+  /* constructor */
+  public Servidor(String dominio, String ip){
+    this.dominio = dominio;
+    this.ip = ip;
+  }
+
+  /* gets */
+  public String getDominio(){
+    return dominio;
+  }
+
+  public String getIp(){
+    return ip;
+  }
 }

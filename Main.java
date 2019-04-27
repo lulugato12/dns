@@ -18,24 +18,6 @@ public class Main{
     Scanner scan = new Scanner(System.in);
     int opcion = 9999;
 
-    /* variables archivo */
-    String archivo = "data.txt";
-    int n = 0;
-
-    /* cargar informacion */
-    try{
-      FileReader fl = new FileReader(archivo);
-      BufferedReader br = new BufferedReader(fl);
-      /* informacion del resolver */
-      n = Integer.parseInt(br.readLine());
-      /* informacion del root */
-      n = Integer.parseInt(br.readLine());
-      /* informacion de los tld */
-    }
-    catch(IOException e){
-      System.out.println("Ocurrio un error con el archivo");
-    }
-
     /* desplegar menu */
     do{
       System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");

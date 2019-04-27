@@ -5,8 +5,6 @@ Colaboradores:
 @lulugato12
 @jaorsa
 
-Hola :3
-
 **Falta por resolver:**
 - [ ] inicializar los objetos
 - [ ] objeto Root

@@ -10,18 +10,20 @@ import java.util.ArrayList;
 
 public class Resolver{
   /* variables */
+  Root r;
   ArrayList<String> sitio;
   ArrayList<String> ip;
 
   /* metodos */
   /* constructor */
   public Resolver(){
+    r = new Root();
     sitio = new ArrayList<String>();
     ip = new ArrayList<String>();
   }
 
   /* inicia la busqueda del ip */
-  public String encontrarIp(String pagina, Root r){
+  public String encontrarIp(String pagina){
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
       if(sitio.get(i) == pagina){

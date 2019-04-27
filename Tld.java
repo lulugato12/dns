@@ -9,10 +9,12 @@
 
  public class Tld{
    /* variables */
+   String tld;
    ArrayList<Servidor> memoria;
 
    /* metodos */
-   public Tld(){
+   public Tld(String tld){
+     this.tld = tld;
      memoria = new ArrayList<Servidor>();
    }
 

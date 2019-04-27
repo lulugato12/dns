@@ -14,10 +14,10 @@ public class Root{
 
   /* metodos */
   /* constructor */
-  public Tld(Tld com, Tld net, Tld org){
-    this.com = com;
-    this.net = net;
-    this.org = org;
+  public Root(){
+    com = new Tld();
+    net = new Tld();
+    org = new Tld();
   }
 
   /* seleccionar el tld adecuado */

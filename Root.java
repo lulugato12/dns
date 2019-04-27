@@ -8,7 +8,20 @@
 
 public class Root{
   /* variables */
+  Tld com;
+  Tld net;
+  Tld org;
 
   /* metodos */
+  /* constructor */
+  public Tld(Tld com, Tld net, Tld org){
+    this.com = com;
+    this.net = net;
+    this.org = org;
+  }
 
+  /* seleccionar el tld adecuado */
+  public void redirec(String dominio){
+
+  }
 }

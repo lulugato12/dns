@@ -6,7 +6,7 @@
  * Objeto Servidor.
  */
  import java.util.ArrayList;
- 
+
  public class Tld{
    /* variables */
    ArrayList<Servidor> memoria;
@@ -28,6 +28,6 @@
        }
      }
      /* ## revisar que hace en realidad un tld */
-     return new Servidor("Un error ha ocurrido", "127.0.0.1");
+     return null;
    }
  }

@@ -6,9 +6,8 @@ Colaboradores:
 @jaorsa
 
 **Falta por resolver:**
-- [ ] Tld: que pasa si no existe un dominio?
-- [ ] root
-- [ ] resolver
-- [ ] lectura de datos
-- [ ] guardar datos
-- [ ] agregar dominios
+- [ ] inicializar los objetos
+- [ ] objeto Root
+- [ ] objeto Tld
+- [ ] objeto Servidor
+- [ ] terminar clase Main

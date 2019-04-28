@@ -14,7 +14,8 @@
    private ArrayList<Servidor> memoria;
 
    /* metodos */
-   public Tld(String tld){
+   public Tld(String ip, String tld){
+     this.ip = ip;
      this.tld = tld;
      memoria = new ArrayList<Servidor>();
    }
@@ -30,7 +31,6 @@
          return memoria.get(i);
        }
      }
-     /* ## revisar que hace en realidad un tld */
      return null;
    }
 

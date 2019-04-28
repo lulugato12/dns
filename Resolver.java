@@ -39,7 +39,7 @@ public class Resolver{
   }
 
   /* agregar ip a la memoria del resolver */
-  public void agregarIp(String ipAdress, String pagina){
+  private void agregarIp(String ipAdress, String pagina){
     sitio.add(pagina);
     ips.add(ipAdress);
   }

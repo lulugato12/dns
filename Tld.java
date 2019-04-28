@@ -9,6 +9,7 @@
 
  public class Tld{
    /* variables */
+   private int ip;
    private String tld;
    private ArrayList<Servidor> memoria;
 
@@ -33,8 +34,12 @@
      return null;
    }
 
-   /* get tld */
+   /* gets*/
    public String getTld(){
      return tld;
+   }
+
+   public int getIp(){
+     return ip;
    }
  }

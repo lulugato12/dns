@@ -14,15 +14,18 @@ import java.io.BufferedReader;
 
 public class Main{
   public static void main(String[] args) {
-    /* variables menu*/
+    /* variables */
     Scanner scan = new Scanner(System.in);
+    String ipHost = "192.168.1.85";
+
+    /* variables menu*/
     String dominio = "";
     String ip = "";
     String dominioSup = "";
     int opcion = 9999;
 
     /* resolvedor */
-    Resolver r = new Resolver();
+    Resolver r = new Resolver("131.98.1.1");
 
     /* desplegar menu */
     do{

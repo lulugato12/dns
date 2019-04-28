@@ -9,3 +9,5 @@ Colaboradores:
 - [ ] inicializar los objetos
 - [ ] objeto Root: hacer funciones
 - [ ] terminar clase Main
+- [ ] hacer metodo para imprimir mensaje DNS en cada clase
+- [ ] agregar ip a todas las clases

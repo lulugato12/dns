@@ -8,14 +8,16 @@
 public class Servidor{
   /* variables */
   private String dominio;
-  private String ip;
+  private String ipServidor;
+  private String ipDominio;
 
   /* metodos */
 
   /* constructor */
-  public Servidor(String dominio, String ip){
+  public Servidor(String dominio, String ipDominio, String ipServidor){
     this.dominio = dominio;
-    this.ip = ip;
+    this.ipDominio = ipDominio;
+    this.ipServidor = ipServidor;
   }
 
   /* gets */
@@ -23,7 +25,11 @@ public class Servidor{
     return dominio;
   }
 
-  public String getIp(){
-    return ip;
+  public String getIpServidor(){
+    return ipServidor;
+  }
+
+  public String getIpDominio(){
+    return ipDominio;
   }
 }

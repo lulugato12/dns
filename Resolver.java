@@ -10,16 +10,18 @@ import java.util.ArrayList;
 
 public class Resolver{
   /* variables */
+  private String ip;
   private Root r;
   private ArrayList<String> sitio;
-  private ArrayList<String> ip;
+  private ArrayList<String> ips;
 
   /* metodos */
   /* constructor */
-  public Resolver(){
+  public Resolver(String ip){
+    this.ip = ip;
     r = new Root();
     sitio = new ArrayList<String>();
-    ip = new ArrayList<String>();
+    ips = new ArrayList<String>();
   }
 
   /* inicia la busqueda del ip */
@@ -27,7 +29,7 @@ public class Resolver{
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
       if(sitio.get(i) == pagina){
-        return ip.get(i);
+        return ips.get(i);
       }
     }
 
@@ -39,7 +41,7 @@ public class Resolver{
   /* agregar ip a la memoria del resolver */
   public void agregarIp(String ipAdress, String pagina){
     sitio.add(pagina);
-    ip.add(ipAdress);
+    ips.add(ipAdress);
   }
 
   /* get root */

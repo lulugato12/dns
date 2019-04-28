@@ -20,7 +20,12 @@ public class Root{
   /* set tld */
   public void setTld(Tld nuevo, String nombre){
     /* terminar */
-    Tld newTld = new Tld(nombre);
+    for(int i = 0; i < tlds.size(); i++){
+      if(tlds.get(i).getTld() == nombre){
+        System.out.println("Ya existe");
+      }
+      else
+          tlds.add(nuevo);
   }
 
   /* get tld */

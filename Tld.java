@@ -9,7 +9,7 @@
 
  public class Tld{
    /* variables */
-   private int ip;
+   private String ip;
    private String tld;
    private ArrayList<Servidor> memoria;
 

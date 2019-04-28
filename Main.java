@@ -20,8 +20,8 @@ public class Main{
 
     /* variables menu*/
     String dominio = "";
-    String ip = "";
-    String dominioSup = "";
+    String ipDominio = "";
+    String ipServidor = "";
     int opcion = 9999;
 
     /* resolvedor */
@@ -40,28 +40,24 @@ public class Main{
           /* proceso para dar de alta un dominio */
           System.out.println("Escribe el nombre del dominio");
           dominio = scan.nextLine();
-          System.out.println("Escribibe el dominio superior");
-          dominioSup = scan.nextLine();
-          System.out.println("Escribe el IP");
-          ip = scan.nextLine();
+          System.out.println("Escribe el IP del servidor");
+          ipServidor = scan.nextLine();
+          System.out.println("Escribe el IP del dominio");
+          ipDominio = scan.nextLine();
 
           Root root = r.getRoot();
           /* asignacion del servidor a la lista del tld */
-          switch(dominioSup){
-            case "com":
-              break;
-            case "net":
-              break;
-            case "org":
-              break;
-            default:
-              System.out.println("El dominio superior no es valido");
-          }
+
+
+
+          /* guardar cambios en el root */
+          r.setRoot(root);
           break;
         case 2:
           /* buscar el ip de un dominio */
-
-
+          System.out.println("Escribe el nombre del dominio");
+          dominio = scan.nextLine();
+          r.encontrarIp(dominio);
           break;
         default:
           System.out.println("Opcion no valida.");

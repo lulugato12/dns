@@ -9,8 +9,8 @@
 
  public class Tld{
    /* variables */
-   String tld;
-   ArrayList<Servidor> memoria;
+   private String tld;
+   private ArrayList<Servidor> memoria;
 
    /* metodos */
    public Tld(String tld){
@@ -31,5 +31,10 @@
      }
      /* ## revisar que hace en realidad un tld */
      return null;
+   }
+
+   /* get tld */
+   public String getTld(){
+     return tld;
    }
  }

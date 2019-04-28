@@ -7,8 +7,8 @@
  */
 public class Servidor{
   /* variables */
-  String dominio;
-  String ip;
+  private String dominio;
+  private String ip;
 
   /* metodos */
 

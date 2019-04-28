@@ -7,7 +7,5 @@ Colaboradores:
 
 **Falta por resolver:**
 - [ ] inicializar los objetos
-- [ ] objeto Root
-- [ ] objeto Tld
-- [ ] objeto Servidor
+- [ ] objeto Root: hacer funciones
 - [ ] terminar clase Main

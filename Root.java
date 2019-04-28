@@ -5,23 +5,30 @@
  * Descripcion:
  * Objeto Root.
  */
+import java.util.ArrayList;
 
 public class Root{
   /* variables */
-  Tld com;
-  Tld net;
-  Tld org;
+  private ArrayList<Tld> tlds;
 
   /* metodos */
   /* constructor */
   public Root(){
-    com = new Tld();
-    net = new Tld();
-    org = new Tld();
+    tlds = new ArrayList<Tld>();
   }
 
   /* seleccionar el tld adecuado */
   public void redirec(String dominio){
 
+  }
+
+  /* set tld */
+  public void setTld(Tld nuevo, String nombre){
+    /* terminar */
+  }
+
+  /* get tld */
+  public Tld getT(String nombre){
+    /* terminar */
   }
 }

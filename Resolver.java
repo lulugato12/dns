@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class Resolver{
   /* variables */
-  Root r;
-  ArrayList<String> sitio;
-  ArrayList<String> ip;
+  private Root r;
+  private ArrayList<String> sitio;
+  private ArrayList<String> ip;
 
   /* metodos */
   /* constructor */
@@ -40,5 +40,15 @@ public class Resolver{
   public void agregarIp(String ipAdress, String pagina){
     sitio.add(pagina);
     ip.add(ipAdress);
+  }
+
+  /* get root */
+  public Root getRoot(){
+    return r;
+  }
+
+  /* set root */
+  public void setRoot(Root r){
+    this.r = r;
   }
 }

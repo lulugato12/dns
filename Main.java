@@ -48,11 +48,16 @@ public class Main{
           Root root = r.getRoot();
           /* asignacion del servidor a la lista del tld */
 
+
+
+          /* guardar cambios en el root */
+          r.setRoot(root);
           break;
         case 2:
           /* buscar el ip de un dominio */
-
-
+          System.out.println("Escribe el nombre del dominio");
+          dominio = scan.nextLine();
+          r.encontrarIp(dominio);
           break;
         default:
           System.out.println("Opcion no valida.");

@@ -17,11 +17,6 @@ public class Root{
     tlds = new ArrayList<Tld>();
   }
 
-  /* seleccionar el tld adecuado */
-  public void redirec(String dominio){
-
-  }
-
   /* set tld */
   public void setTld(Tld nuevo, String nombre){
     /* terminar */

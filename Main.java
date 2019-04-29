@@ -66,7 +66,7 @@ public class Main{
         Root root = r.getRoot();
         Tld temp = root.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
         root.setTld(temp,dominio);
-        break;
+        
         default:
           System.out.println("Opcion no valida.");
       }

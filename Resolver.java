@@ -25,10 +25,12 @@ public class Resolver{
   }
 
   /* inicia la busqueda del ip */
-  public String encontrarIp(String pagina){
+  public String encontrarIp(String pagina, String ipH){
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
       if(sitio.get(i) == pagina){
+        mensaje(ipH, ip);
+        mensaje(ip, ipH);
         return ips.get(i);
       }
     }
@@ -36,9 +38,13 @@ public class Resolver{
     /* llama al root */
     String dom = pagina.substring(pagina.indexOf(".")+1, (pagina.length()));
     Tld temp = r.getT(dom);
+    mensaje(ip, temp.getIp());
+    mensaje(temp.getIp(), ip);
     if(temp != null){
       Servidor serv = temp.encontrarServidor(pagina);
       if(serv != null){
+        mensaje(ip, serv.getIpDominio());
+        mensaje(serv.getIpDominio(), ip);
         sitio.add(serv.getDominio());
         ips.add(serv.getIpDominio());
         return serv.getIpServidor();

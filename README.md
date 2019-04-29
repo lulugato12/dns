@@ -9,6 +9,6 @@ Colaboradores:
 - [ ] agregar tld en main
 - [x] objeto Root: hacer funciones
 - [ ] metodo para buscar ip
-- [ ] metodo agregar servidor
+- [x] metodo agregar servidor
 - [ ] hacer metodo para imprimir mensaje DNS en cada clase
 - [x] agregar ip a todas las clases

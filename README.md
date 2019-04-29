@@ -6,9 +6,9 @@ Colaboradores:
 @jaorsa
 
 **Falta por resolver:**
-- [ ] agregar tld en main                 trabajar: @jaorsa
+- [x] agregar tld en main
 - [x] objeto Root: hacer funciones
 - [ ] metodo para buscar ip
-- [x] metodo agregar servidor              trabaja: @lulugato12
+- [x] metodo agregar servidor
 - [ ] hacer metodo para imprimir mensaje DNS en cada clase
 - [x] agregar ip a todas las clases

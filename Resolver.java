@@ -36,8 +36,9 @@ public class Resolver{
     /* llama al root */
     if(r.getT(pagina)==null){
       Tld temp = null;
-      Tld temp = new Tld(ip, pagina);
-      r.setTld(temp,pagina);
+      String dominio=pagina.substring(pagina.indexOf(".")+1, (pagina.length()));
+      Tld temp = new Tld(ip,dominio);
+      r.setTld(temp,dominio);
     }
 
     return "Algo salio mal";

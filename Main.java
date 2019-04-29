@@ -13,10 +13,16 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 
 public class Main{
+  public static String agregarEspacios(String ip){
+    for(int i = ip.length(); i < 17; i++){
+      ip+= " ";
+    }
+    return ip;
+  }
   public static void main(String[] args) {
     /* variables */
     Scanner scan = new Scanner(System.in);
-    String ipHost = "192.168.1.85";
+    String ipHost = "192.168.1.85     ";
     int contQ = 0;
     int contA = 0;
 
@@ -27,7 +33,7 @@ public class Main{
     int opcion = 9999;
 
     /* resolvedor */
-    Resolver r = new Resolver("131.98.1.1");
+    Resolver r = new Resolver("131.98.1.1       ");
 
     /* desplegar menu */
     do{
@@ -44,8 +50,10 @@ public class Main{
           dominio = scan.nextLine();
           System.out.println("Escribe el IP del servidor");
           ipServidor = scan.nextLine();
+          ipServidor = agregarEspacios(ipServidor);
           System.out.println("Escribe el IP del dominio");
           ipDominio = scan.nextLine();
+          ipDominio = agregarEspacios(ipDominio);
 
           /* asignacion del servidor a la lista del tld */
           Root root = r.getRoot();
@@ -61,7 +69,7 @@ public class Main{
           /* buscar el ip de un dominio */
           System.out.println("Escribe el nombre del dominio");
           dominio = scan.nextLine();
-          r.encontrarIp(dominio);
+          r.encontrarIp(dominio, ipHost);
           break;
         case 3:
           /* agregar tld */
@@ -69,6 +77,7 @@ public class Main{
           dominio = scan.nextLine();
           System.out.println("Escribe el ip del servidor tld");
           ipServidor = scan.nextLine();
+          ipServidor = agregarEspacios(ipServidor);
           Root root2 = r.getRoot();
           root2.setTld(new Tld(ipServidor, dominio), dominio);
           r.setRoot(root2);

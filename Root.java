@@ -26,6 +26,7 @@ public class Root{
       }
       else
           tlds.add(nuevo);
+        }
   }
 
   /* get tld */
@@ -40,5 +41,7 @@ public class Root{
       else{
         setTld(temp, nombre);
       }
+    }
+    return null;
   }
 }

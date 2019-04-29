@@ -66,8 +66,8 @@ public class Main{
         System.out.println("Escribe el nombre del dominio");
         dominio = scan.nextLine();
         Root root2 = r.getRoot();
-        Tld temp = root2.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
-        root2.setTld(temp,dominio);
+        Tld temp2 = root2.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
+        root2.setTld(temp2,dominio);
           break;
         default:
           System.out.println("Opcion no valida.");

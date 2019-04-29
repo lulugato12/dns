@@ -45,10 +45,9 @@ public class Main{
           System.out.println("Escribe el IP del dominio");
           ipDominio = scan.nextLine();
 
-          Root root = r.getRoot();
           /* asignacion del servidor a la lista del tld */
-
-
+          Root root = r.getRoot();
+          Tld temp = root.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
 
           /* guardar cambios en el root */
           r.setRoot(root);
@@ -59,6 +58,9 @@ public class Main{
           dominio = scan.nextLine();
           r.encontrarIp(dominio);
           break;
+        case 3:
+        /* agregar tld */
+
         default:
           System.out.println("Opcion no valida.");
       }

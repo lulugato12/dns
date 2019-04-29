@@ -39,7 +39,7 @@
      return tld;
    }
 
-   public int getIp(){
+   public String getIp(){
      return ip;
    }
  }

@@ -38,9 +38,6 @@ public class Root{
         tlds.remove(tlds.get(i));
         return temp;
       }
-      else{
-        setTld(temp, nombre);
-      }
     }
     return null;
   }

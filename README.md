@@ -6,8 +6,9 @@ Colaboradores:
 @jaorsa
 
 **Falta por resolver:**
-- [ ] inicializar los objetos
+- [ ] agregar tld en main
 - [x] objeto Root: hacer funciones
-- [ ] terminar clase Main
+- [ ] metodo para buscar ip
+- [ ] metodo agregar servidor
 - [ ] hacer metodo para imprimir mensaje DNS en cada clase
 - [x] agregar ip a todas las clases

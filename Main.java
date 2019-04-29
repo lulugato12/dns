@@ -29,7 +29,7 @@ public class Main{
 
     /* desplegar menu */
     do{
-      System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n0. Salir");
+      System.out.println("Elige una opcion:\n1. Dar de alta un dominio\n2. Buscar la ip de un dominio\n3. Agregar tld\n0. Salir");
       opcion = Integer.parseInt(scan.nextLine());
 
       switch(opcion){
@@ -48,6 +48,7 @@ public class Main{
           /* asignacion del servidor a la lista del tld */
           Root root = r.getRoot();
           Tld temp = root.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
+          temp.agregarServidor(new Servidor(dominio, ipDominio, ipServidor));
 
           /* guardar cambios en el root */
           r.setRoot(root);

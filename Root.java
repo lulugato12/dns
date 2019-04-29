@@ -33,7 +33,12 @@ public class Root{
     /* terminar */
     for(int i = 0; i < tlds.size(); i++){
       if(tlds.get(i).getTld() == nombre){
-        return tlds.get(i);
+        Tld temp = tlds.get(i);
+        tlds.remove(tlds.get(i));
+        return temp;
+      }
+      else{
+        setTld(temp, nombre);
       }
   }
 }

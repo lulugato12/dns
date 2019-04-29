@@ -59,9 +59,14 @@ public class Main{
           Root root = r.getRoot();
           String dom = dominio.substring(dominio.indexOf(".")+1, (dominio.length()));
           Tld temp = root.getT(dom);
-          temp.agregarServidor(new Servidor(dominio, ipDominio, ipServidor));
-          root.setTld(temp, dom);
-
+          if(temp != null){
+            Servidor s = new Servidor(dominio, ipDominio, ipServidor);
+            temp.agregarServidor(s);
+            root.setTld(temp, dom);
+          }
+          else{
+            System.out.println("No existe el tld");
+          }
           /* guardar cambios en el root */
           r.setRoot(root);
           break;
@@ -79,7 +84,8 @@ public class Main{
           ipServidor = scan.nextLine();
           ipServidor = agregarEspacios(ipServidor);
           Root root2 = r.getRoot();
-          root2.setTld(new Tld(ipServidor, dominio), dominio);
+          TLd x = new Tld(ipServidor, dominio);
+          root2.setTld(x, dominio);
           r.setRoot(root2);
           break;
         default:

@@ -19,24 +19,23 @@ public class Root{
 
   /* set tld */
   public void setTld(Tld nuevo, String nombre){
-    /* terminar */
+    boolean agregado = false;
     for(int i = 0; i < tlds.size(); i++){
       if(tlds.get(i).getTld() == nombre){
-        System.out.println("Ya existe");
+        tlds.set(i, nuevo);
+        agregado = true;
       }
-      else
-          tlds.add(nuevo);
-        }
+    }
+    if(!agregado){
+      tlds.add(nuevo);
+    }
   }
 
   /* get tld */
   public Tld getT(String nombre){
-    /* terminar */
     for(int i = 0; i < tlds.size(); i++){
       if(tlds.get(i).getTld() == nombre){
-        Tld temp = tlds.get(i);
-        tlds.remove(tlds.get(i));
-        return temp;
+        return tlds.get(i);
       }
     }
     return null;

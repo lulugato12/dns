@@ -71,6 +71,8 @@ public class Main{
         String dom2 = dominio.substring(dominio.indexOf(".")+1, (dominio.length()));
         Tld temp2 = root2.getT(dom2);
         root2.setTld(temp2,dom2);
+        Tld temp2 = root2.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
+        root2.setTld(temp2,dominio);
           break;
         default:
           System.out.println("Opcion no valida.");

@@ -9,6 +9,6 @@ Colaboradores:
 - [ ] agregar tld en main                 trabajar: @jaorsa
 - [x] objeto Root: hacer funciones
 - [ ] metodo para buscar ip
-- [ ] metodo agregar servidor              trabaja: @lulugato12
+- [x] metodo agregar servidor              trabaja: @lulugato12
 - [ ] hacer metodo para imprimir mensaje DNS en cada clase
 - [x] agregar ip a todas las clases

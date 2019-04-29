@@ -34,11 +34,15 @@ public class Resolver{
     }
 
     /* llama al root */
-    if(r.getT(pagina)==null){
-      Tld temp = null;
-      String dominio=pagina.substring(pagina.indexOf(".")+1, (pagina.length()));
-      Tld temp = new Tld(ip,dominio);
-      r.setTld(temp,dominio);
+    String dom = pagina.substring(pagina.indexOf(".")+1, (pagina.length()));
+    Tld temp = r.getT(dom);
+    if(temp != null){
+      Servidor serv = temp.encontrarServidor(pagina);
+      if(serv != null){
+        sitio.add(serv.getDominio());
+        ips.add(serv.getIpDominio());
+        return serv.getIpServidor();
+      }
     }
 
     return "Algo salio mal";
@@ -61,7 +65,7 @@ public class Resolver{
   }
 
   /* mensaje nds */
-  private void mensaje(int q, int a, String ipSource, String ipDest){
+  private void mensaje(String ipSource, String ipDest){
     System.out.println("+-----------------+-----------------+");
     System.out.print("|"+ipSource);
     for(int i = ipSource.length(); i < 17; i++){

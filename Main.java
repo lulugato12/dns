@@ -64,15 +64,14 @@ public class Main{
           r.encontrarIp(dominio);
           break;
         case 3:
-        /* agregar tld */
-        System.out.println("Escribe el nombre del dominio");
-        dominio = scan.nextLine();
-        Root root2 = r.getRoot();
-        String dom2 = dominio.substring(dominio.indexOf(".")+1, (dominio.length()));
-        Tld temp2 = root2.getT(dom2);
-        root2.setTld(temp2,dom2);
-        Tld temp2 = root2.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
-        root2.setTld(temp2,dominio);
+          /* agregar tld */
+          System.out.println("Escribe el nombre del servidor tld");
+          dominio = scan.nextLine();
+          System.out.println("Escribe el ip del servidor tld");
+          ipServidor = scan.nextLine();
+          Root root2 = r.getRoot();
+          root2.setTld(new Tld(ipServidor, dominio), dominio);
+          r.setRoot(root2);
           break;
         default:
           System.out.println("Opcion no valida.");

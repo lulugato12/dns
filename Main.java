@@ -47,8 +47,10 @@ public class Main{
 
           /* asignacion del servidor a la lista del tld */
           Root root = r.getRoot();
-          Tld temp = root.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
+          String dom = dominio.substring(dominio.indexOf(".")+1, (dominio.length()));
+          Tld temp = root.getT(dom);
           temp.agregarServidor(new Servidor(dominio, ipDominio, ipServidor));
+          root.setTld(temp, dom);
 
           /* guardar cambios en el root */
           r.setRoot(root);
@@ -66,6 +68,7 @@ public class Main{
         Root root = r.getRoot();
         Tld temp = root.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
         root.setTld(temp,dominio);
+          break;
         default:
           System.out.println("Opcion no valida.");
       }

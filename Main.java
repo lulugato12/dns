@@ -17,6 +17,8 @@ public class Main{
     /* variables */
     Scanner scan = new Scanner(System.in);
     String ipHost = "192.168.1.85";
+    int contQ = 0;
+    int contA = 0;
 
     /* variables menu*/
     String dominio = "";
@@ -66,6 +68,9 @@ public class Main{
         System.out.println("Escribe el nombre del dominio");
         dominio = scan.nextLine();
         Root root2 = r.getRoot();
+        String dom2 = dominio.substring(dominio.indexOf(".")+1, (dominio.length()));
+        Tld temp2 = root2.getT(dom2);
+        root2.setTld(temp2,dom2);
         Tld temp2 = root2.getT(dominio.substring(dominio.indexOf("."), (dominio.length()-1)));
         root2.setTld(temp2,dominio);
           break;

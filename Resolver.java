@@ -58,4 +58,19 @@ public class Resolver{
   public void setRoot(Root r){
     this.r = r;
   }
+
+  /* mensaje nds */
+  private void mensaje(int q, int a, String ipSource, String ipDest){
+    System.out.println("+-----------------+-----------------+");
+    System.out.print("|"+ipSource);
+    for(int i = ipSource.length(); i < 17; i++){
+      System.out.print(" ");
+    }
+    System.out.print("|"+ipDest);
+    for(int i = ipDest.length(); i < 17; i++){
+      System.out.print(" ");
+    }
+    System.out.println("|");
+    System.out.println("+-----------------+-----------------+");
+  }
 }

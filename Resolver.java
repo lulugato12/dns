@@ -34,6 +34,11 @@ public class Resolver{
     }
 
     /* llama al root */
+    if(r.getT(pagina)==null){
+      Tld temp = null;
+      Tld temp = new Tld(ip, pagina);
+      r.setTld(temp,pagina);
+    }
 
     return "Algo salio mal";
   }

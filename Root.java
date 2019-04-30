@@ -34,7 +34,8 @@ public class Root{
   /* get tld */
   public Tld getT(String nombre){
     for(int i = 0; i < tlds.size(); i++){
-      if(tlds.get(i).getTld() == nombre){
+      System.out.println(tlds.get(i).getTld());
+      if(tlds.get(i).getTld().equals(nombre)){
         return tlds.get(i);
       }
     }

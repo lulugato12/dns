@@ -14,23 +14,28 @@ public class Resolver{
   private Root r;
   private ArrayList<String> sitio;
   private ArrayList<String> ips;
+  private int id;
 
   /* metodos */
   /* constructor */
   public Resolver(String ip){
     this.ip = ip;
-    r = new Root();
+    r = new Root("71.128.20.4      ");
     sitio = new ArrayList<String>();
     ips = new ArrayList<String>();
+    id = 0;
   }
 
   /* inicia la busqueda del ip */
   public String encontrarIp(String pagina, String ipH){
+    int tempoId = id;
+    /* mensaje resolvedor - host*/
+    mensaje(ipH, ip, tempoId, 1, 0, pagina);
+
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
       if(sitio.get(i).equals(pagina)){
-        mensaje(ipH, ip);
-        mensaje(ip, ipH);
+        mensaje(ip, ipH, 1, 1, ips.get(i));
         return ips.get(i);
       }
     }
@@ -38,19 +43,33 @@ public class Resolver{
     /* llama al root */
     String dom = pagina.substring(pagina.indexOf(".")+1, (pagina.length()));
     Tld temp = r.getT(dom);
-    mensaje(ip, temp.getIp());
-    mensaje(temp.getIp(), ip);
+
+    /* mensaje root - resolvedor */
+    mensaje(ip, r.getIp(), id, 1, 0, pagina);
+    mensaje(r.getIp(), ip, id, 1, 1, temp.getIp());
+
     if(temp != null){
       Servidor serv = temp.encontrarServidor(pagina);
+      mensaje(ip, temp.getIp(), id, 1, 0, pagina);
+
       if(serv != null){
-        mensaje(ip, serv.getIpDominio());
-        mensaje(serv.getIpDominio(), ip);
+        /* mensaje tld - root */
+        mensaje(temp.getIp(), ip, id, 1, 1, serv.getIpServidor());
+
+        /* mensaje servidor - resolvedor */
+        mensaje(ip, serv.getIpServidor(), id, 1, 0, pagina);
+        mensaje(serv.getIpServidor(), ip, id, 1, 1, serv.getDominio());
+
+        /* guardar en cache */
         sitio.add(serv.getDominio());
         ips.add(serv.getIpDominio());
+
+        /* mensaje resolvedor - host*/
+        mensaje(ip, ipH, tempoId, 1, 1, serv.getIpDominio());
+
         return serv.getIpServidor();
       }
     }
-
     return "Algo salio mal";
   }
 
@@ -71,17 +90,19 @@ public class Resolver{
   }
 
   /* mensaje nds */
-  private void mensaje(String ipSource, String ipDest){
+  private void mensaje(String ipSource, String ipDest, int idT, int q, int a, String texto){
     System.out.println("+-----------------+-----------------+");
-    System.out.print("|"+ipSource);
-    for(int i = ipSource.length(); i < 17; i++){
-      System.out.print(" ");
-    }
-    System.out.print("|"+ipDest);
-    for(int i = ipDest.length(); i < 17; i++){
-      System.out.print(" ");
-    }
-    System.out.println("|");
+    System.out.println("|"+ipSource+"|"+ipDest+"|");
     System.out.println("+-----------------+-----------------+");
+    System.out.println("|    id: "+idT+"                          |");
+    System.out.println("+-----------------+-----------------+");
+    System.out.println("| preguntas: "+q+"    | respuestas: "+a+"   |");
+    System.out.println("+-----------------+-----------------+");
+    for(int i = texto.length(); i < 33; i++){
+      texto+= " ";
+    }
+    System.out.println("| "+texto+" |");
+    System.out.println("+-----------------------------------+");
+    id++;
   }
 }

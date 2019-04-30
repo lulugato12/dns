@@ -23,8 +23,6 @@ public class Main{
     /* variables */
     Scanner scan = new Scanner(System.in);
     String ipHost = "192.168.1.85     ";
-    int contQ = 0;
-    int contA = 0;
 
     /* variables menu*/
     String dominio = "";

@@ -28,7 +28,7 @@ public class Resolver{
   public String encontrarIp(String pagina, String ipH){
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
-      if(sitio.get(i) == pagina){
+      if(sitio.get(i).equals(pagina)){
         mensaje(ipH, ip);
         mensaje(ip, ipH);
         return ips.get(i);

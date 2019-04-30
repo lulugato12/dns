@@ -28,8 +28,9 @@ public class Resolver{
 
   /* inicia la busqueda del ip */
   public String encontrarIp(String pagina, String ipH){
+    int tempoId = id;
     /* mensaje resolvedor - host*/
-    mensaje(ipH, ip, 1, 0, pagina);
+    mensaje(ipH, ip, tempoId, 1, 0, pagina);
 
     /* empieza en su memoria */
     for(int i = 0; i < sitio.size(); i++){
@@ -44,27 +45,27 @@ public class Resolver{
     Tld temp = r.getT(dom);
 
     /* mensaje root - resolvedor */
-    mensaje(ip, r.getIp(), 1, 0, pagina);
-    mensaje(r.getIp(), ip, 1, 1, temp.getIp());
+    mensaje(ip, r.getIp(), id, 1, 0, pagina);
+    mensaje(r.getIp(), ip, id, 1, 1, temp.getIp());
 
     if(temp != null){
       Servidor serv = temp.encontrarServidor(pagina);
-      mensaje(ip, temp.getIp(), 1, 0, pagina);
+      mensaje(ip, temp.getIp(), id, 1, 0, pagina);
 
       if(serv != null){
         /* mensaje tld - root */
-        mensaje(temp.getIp(), ip, 1, 1, serv.getIpServidor());
+        mensaje(temp.getIp(), ip, id, 1, 1, serv.getIpServidor());
 
         /* mensaje servidor - resolvedor */
-        mensaje(ip, serv.getIpServidor(), 1, 0, pagina);
-        mensaje(serv.getIpServidor(), ip, 1, 1, serv.getDominio());
+        mensaje(ip, serv.getIpServidor(), id, 1, 0, pagina);
+        mensaje(serv.getIpServidor(), ip, id, 1, 1, serv.getDominio());
 
         /* guardar en cache */
         sitio.add(serv.getDominio());
         ips.add(serv.getIpDominio());
 
         /* mensaje resolvedor - host*/
-        mensaje(ip, ipH, 1, 1, serv.getIpDominio());
+        mensaje(ip, ipH, tempoId, 1, 1, serv.getIpDominio());
 
         return serv.getIpServidor();
       }
@@ -89,11 +90,11 @@ public class Resolver{
   }
 
   /* mensaje nds */
-  private void mensaje(String ipSource, String ipDest, int q, int a, String texto){
+  private void mensaje(String ipSource, String ipDest, int idT, int q, int a, String texto){
     System.out.println("+-----------------+-----------------+");
     System.out.println("|"+ipSource+"|"+ipDest+"|");
     System.out.println("+-----------------+-----------------+");
-    System.out.println("|    id: "+id+"                          |");
+    System.out.println("|    id: "+idT+"                          |");
     System.out.println("+-----------------+-----------------+");
     System.out.println("| preguntas: "+q+"    | respuestas: "+a+"   |");
     System.out.println("+-----------------+-----------------+");

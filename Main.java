@@ -84,7 +84,7 @@ public class Main{
           ipServidor = scan.nextLine();
           ipServidor = agregarEspacios(ipServidor);
           Root root2 = r.getRoot();
-          TLd x = new Tld(ipServidor, dominio);
+          Tld x = new Tld(ipServidor, dominio);
           root2.setTld(x, dominio);
           r.setRoot(root2);
           break;

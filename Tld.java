@@ -27,7 +27,7 @@
 
    public Servidor encontrarServidor(String dominio){
      for(int i = 0; i < memoria.size(); i++){
-       if(memoria.get(i).getDominio() == dominio){
+       if(memoria.get(i).getDominio().contains(dominio)){
          return memoria.get(i);
        }
      }
